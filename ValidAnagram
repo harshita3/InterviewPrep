@@ -1,0 +1,28 @@
+//Given two strings s and t , write a function to determine if t is an anagram of s.
+
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+     if(s.length()!=t.length()){
+         return false; 
+     }
+        String first_string="";
+        String second_string="";
+    char[] first = s.toCharArray();
+    char[] second = t.toCharArray(); 
+     Arrays.sort(first); 
+     Arrays.sort(second); 
+        for(int i = 0; i<first.length; i++){
+            first_string+=first[i]; 
+            
+        }
+        for(int j=0; j<second.length; j++){
+            second_string+=second[j]; 
+        }
+        
+        boolean bool = first_string.equals(second_string); 
+        return bool; 
+          
+    }
+}
+
