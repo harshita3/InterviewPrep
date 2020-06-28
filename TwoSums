@@ -1,0 +1,23 @@
+//Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] fin_sum = new int[2]; 
+        for(int i=0; i<nums.length; i++){
+            for(int j=1; j<nums.length; j++){
+                if(i==j){
+                    break; 
+                }
+                int sum = nums[i]+nums[j]; 
+                if(sum==target){
+                    fin_sum[0]=i; 
+                    fin_sum[1]=j; 
+                    return fin_sum; 
+                }
+                
+            }
+        }
+        return fin_sum; 
+    }
+}
