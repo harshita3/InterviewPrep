@@ -1,0 +1,21 @@
+Given a 32-bit signed integer, reverse digits of an integer.
+
+
+
+class Solution {
+    public int reverse(int x) {
+    int need_reversing = x; 
+    long reversed = 0;
+
+    while(need_reversing!=0){
+        int digits = need_reversing%10; 
+        reversed = reversed*10 + digits; 
+        need_reversing /= 10; 
+    }
+        if(reversed < Integer.MIN_VALUE || reversed > Integer.MAX_VALUE){
+            return 0; 
+        }
+        
+        return (int)reversed; 
+    }
+}       
