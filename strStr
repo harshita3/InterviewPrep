@@ -1,0 +1,27 @@
+//Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+
+class Solution {
+    public int strStr(String haystack, String needle) {
+        String substr = "";
+        int need_length = needle.length();
+        if(needle.length()>haystack.length()){
+            return -1; 
+        }
+        if(haystack.isEmpty()&&needle.isEmpty()){
+            return 0; 
+        }
+        char[] hay = haystack.toCharArray();
+             int i=0; 
+             while(need_length<=hay.length){
+            substr = haystack.substring(i, need_length);
+            if(substr.equals(needle)){
+                return i; 
+            }
+            need_length++; 
+            i++; 
+        }
+        
+            return -1; 
+    }
+}
