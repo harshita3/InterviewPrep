@@ -1,0 +1,28 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+    Arrays.sort(nums); 
+    int max = nums[nums.length-1];
+    if(max != nums.length){
+        max = nums.length; 
+    }
+    int numerator = max*(max+1);
+    int arr_sum = numerator/2; 
+    int dif = 0; 
+    int sum = 0;
+        for(int i =0; i<nums.length; i++){
+            sum += nums[i]; 
+            
+        }
+    // if(nums.length==1){
+    //     if(nums[0]==0){
+    //         return 1; 
+    //     }
+    //     else{
+    //         return nums[0]-1; 
+    //     }
+    // }
+    int fin=0; 
+    fin = arr_sum - sum; 
+      return fin;   
+    }
+}
