@@ -1,0 +1,46 @@
+class Solution {
+    public void sortColors(int[] nums) {
+        int red = 0; 
+        int white = 0; 
+        int blue = 0; 
+        int r = 0; 
+        int w = 0; 
+        int b = 0; 
+        int temp = 0; 
+        for(int i = 0; i<nums.length; i++){
+            if(nums[i]==0){
+                red++; 
+            }
+            if(nums[i]==1){
+                white++; 
+            }
+            if(nums[i]==2){
+                blue++; 
+            }
+        }
+       
+        for(r = 0; r<red; r++){
+            nums[r]=0; 
+           // System.out.println(nums[r]); 
+           // System.out.print(nums[r]); 
+        }
+        System.out.print(r); 
+        for(w=0; w<=white; w++){
+            if(r+w<nums.length){
+            nums[r+w]=1; 
+            temp = r+w; 
+            System.out.println(nums[r+w]); 
+            }
+        }
+       //System.out.print(temp); 
+        for(b = 1; b<=blue; b++){
+            nums[temp]=2; 
+           // System.out.println(temp);
+            temp++; 
+        }
+        // for(int i = 0; i<nums.length; i++){
+        //     System.out.println(nums[i]); 
+        // }
+        
+    }
+}
