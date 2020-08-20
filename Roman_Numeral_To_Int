@@ -4,7 +4,7 @@ class Solution {
         int sum = 0;
         int translation [] = new int [str.length]; 
         for(int i = 0; i<str.length; i++){
-            if(str[i]=='I'){
+            if(str[i]=='I'){//these will translate the character into an integer value
                 translation[i]=1; 
             }
             if(str[i]=='V'){
@@ -33,18 +33,14 @@ class Solution {
         }
         
         for(int j = 0; j<translation.length; j++){
-           //if(j+1<translation.length){
-               System.out.print("...");
             if(j+1<translation.length && translation[j+1]>translation[j]){
-                sum += (translation[j+1]-translation[j]); 
+                sum += (translation[j+1]-translation[j]); //if the number after is bigger then you need to subtract the two values then add it 
                 j++; 
             }
            
             else{
-                System.out.print("hi"); 
-                sum += translation[j]; 
+                sum += translation[j]; //normal roman numeral formatting
             }
-           //}
             
         }
         
