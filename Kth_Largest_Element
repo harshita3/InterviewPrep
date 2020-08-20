@@ -1,3 +1,4 @@
+/*Goal of this code was the find the Kth largest element in an Array*/
 class Solution {
     public int findKthLargest(int[] nums, int k) {
         Arrays.sort(nums); //sort the array because the largest elements will be towards the end of the array 
